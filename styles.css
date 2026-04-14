@@ -214,21 +214,6 @@ body{
     color: #777;
 }
 
-@media (max-width: 900px){
-    .card-tati{
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    .texto{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .card-tati .imagen-tati img{
-        width: 100%;
-    }
-}
-
 .servicios{
     background-color: var(--tertiary);
     padding: 50px 50px;
@@ -386,4 +371,196 @@ body{
     cursor: pointer;
     margin-top: 15px;
     border: 1px solid #8663CD;
+}
+
+@media (max-width: 1024px) {
+    /* Tablets */
+    
+    header {
+        gap: 1rem;
+        padding: .5rem 1.5rem;
+    }
+    header .nav-search a {
+        padding: 6px;
+        font-size: 14px;
+    }
+ 
+    
+    .inicio {
+        padding: 60px 30px;
+    }
+
+    .contenedor {
+        gap: 60px;
+    }
+
+    .texto h1 {
+        font-size: 50px;
+    }
+    .texto p {
+        font-size: 17px;
+    }
+
+    .imagen img {
+        width: 340px;
+    }
+ 
+    
+    .sobre-mi {
+        padding: 60px 30px;
+    }
+
+    .card-tati {
+        gap: 40px;
+        width: 100%;
+        padding: 30px;
+    }
+    .card-tati .imagen-tati img {
+        width: 340px;
+    }
+    .card-tati .texto h1 {
+        font-size: 32px;
+    }
+    .card-tati .texto p {
+        font-size: 16px;
+    }
+ 
+    .servicios {
+        padding: 40px 20px;
+    }
+    .servicios footer {
+        padding: 30px 20px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .servicios-dedicados {
+        padding: 2.5rem;
+    }
+ 
+    .inversion {
+        padding: 40px 20px;
+    }
+    .inversion .servicios-container {
+        padding: 20px 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+ 
+    /* Celular */
+    header {
+        padding: .75rem 1.2rem;
+        gap: .5rem;
+    }
+    header .nav-search {
+        display: none;
+    }
+    header .logo-page {
+        font-size: 22px;
+    }
+    header .boton-contacto a {
+        padding: .4rem 1rem;
+        font-size: 13px;
+    }
+ 
+    
+    .inicio {
+        padding: 50px 20px 70px;
+    }
+    .contenedor {
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
+    }
+    .texto {
+        max-width: 100%;
+    }
+    .texto h1 {
+        font-size: 38px;
+    }
+    .texto p {
+        font-size: 16px;
+    }
+    .btn-agendar {
+        width: 100%;
+        text-align: center;
+    }
+    .imagen {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px; 
+    }
+    .imagen img {
+        width: 100%;
+        max-width: 340px;
+        transform: rotate(2deg);
+    }
+    .circulito {
+        width: 120px;
+        height: 120px;
+        bottom: -50px;
+        left: 50%;
+    }
+ 
+    
+    .sobre-mi {
+        padding: 50px 20px;
+    }
+    .card-tati {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        width: 100%;
+    }
+    .card-tati .imagen-tati img {
+        width: 100%;
+        max-width: 100%;
+    }
+    .card-tati .texto h1 {
+        font-size: 28px;
+    }
+    .card-tati .texto p {
+        font-size: 15px;
+    }
+    .stats-analisis {
+        gap: 30px;
+    }
+ 
+    
+    .servicios {
+        padding: 40px 16px;
+    }
+    .servicios-titulo {
+        font-size: 30px;
+    }
+    .servicios footer {
+        padding: 20px 0;
+        grid-template-columns: 1fr;
+    }
+    .servicios-dedicados {
+        padding: 2rem;
+    }
+    .servicios-dedicados p {
+        font-size: 16px;
+    }
+ 
+    
+    .inversion {
+        padding: 40px 16px;
+    }
+    .inversion header {
+        margin-top: 20px;
+    }
+    .inversion header h2 {
+        font-size: 30px;
+    }
+    .inversion .servicios-container {
+        padding: 20px 0;
+        grid-template-columns: 1fr;
+    }
+    .precios-servicios {
+        padding: 40px 24px;
+        line-height: 40px;
+    }
 }
