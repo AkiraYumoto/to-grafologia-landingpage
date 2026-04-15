@@ -13,6 +13,10 @@
     --text-secundary: #cbd5e1
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header {
     font-family: 'Manrope', serif;
     border-bottom: 1px solid var(--tertiary);
@@ -22,6 +26,9 @@ header {
     justify-content: space-between;
     gap: 2rem;
     padding: .5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     .logo-page{
         align-items: center;
         font-family: 'Newsreader', sans-serif;
@@ -32,6 +39,9 @@ header {
         text-align: center;
         text-wrap: balance;
     }
+}
+header a{
+    text-decoration: none;
 }
 
 header .nav-search a{
@@ -219,7 +229,7 @@ body{
     padding: 50px 50px;
 }
 
-.servicios header{
+.servicios div{
     margin-top: 30px;
     text-align: center;
     display: grid;
@@ -278,14 +288,14 @@ body{
     padding: 50px 50px;
 }
 
-.inversion header{
+.inversion .inversion-title{
     align-items: center;
     justify-content: center;
     margin-top: 50px;
     justify-items: center;
     border-bottom: none;
 }
-.inversion header h2{
+.inversion .inversion-title h2{
     font-family: 'Newsreader', sans-serif;
     font-size: 40px;
     font-weight: 400;
@@ -373,6 +383,149 @@ body{
     border: 1px solid #8663CD;
 }
 
+.blog{
+    background-color: var(--tertiary);
+    padding: 80px 20px;
+}
+
+.blog-info{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.blog-titles h2{
+    font-family: 'Newsreader', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.blog-titles p{
+    font-family: 'Manrope', serif;
+    color: #555;
+    margin-top: 10px;
+}
+
+.blog-info .btn-ver-blog{
+    text-decoration: none;
+    color: var(--primary);
+    font-family: 'Manrope', serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.blog-info, .articulos-blog{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.articulos-blog{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 25px;
+    max-width: 1600px;
+    margin-top: 0 auto;
+    grid-auto-rows: 500px;
+}
+
+.post-card{
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card-main{
+    position: relative;
+    border-radius: 25px;
+}
+
+.post-card-main .post-imagen{
+    height: 100%;
+    border-radius: 12px;
+}
+
+.post-card-main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.post-main-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    color: var(--tertiary);
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,1));
+    border-radius: 0 0 12px 12px;
+}
+
+.post-main-text h3{
+    font-family: 'Newsreader', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.post-thumb {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    display: block;
+}
+.post-content{
+    padding: 24px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.post-content h3{
+    font-family: 'Manrope', serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.post-content p{
+    font-size: 15px;
+    color: #777;
+    line-height: 1.4;
+}
+
+.servicios-dedicados, 
+.precios-servicios, 
+.post-card, 
+.post-card-main {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.servicios-dedicados:hover, 
+.precios-servicios:hover, 
+.post-card:hover, 
+.post-card-main:hover {
+    
+    transform: translateY(-12px) scale(1.02); 
+    box-shadow: 0 20px 40px rgba(147, 112, 219, 0.2); 
+}
+
+.precios-servicios:hover{
+    background-color: var(--tertiary);
+}
+
 @media (max-width: 1024px) {
     /* Tablets */
     
@@ -442,6 +595,12 @@ body{
     .inversion .servicios-container {
         padding: 20px 20px;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .articulos-blog{
+        grid-template-columns: 1fr 1fr;
+    }
+    .post-main-text h3{
+        font-size: 18px;
     }
 }
 
@@ -562,5 +721,15 @@ body{
     .precios-servicios {
         padding: 40px 24px;
         line-height: 40px;
+    }
+
+    .blog-info{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .articulos-blog{
+        grid-template-columns: 1fr;
     }
 }
