@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="to_logo.png">
 </head>
 
 <body>
@@ -26,12 +27,12 @@
     <nav class="nav-search">
         <a href="#servicios">SERVICIOS</a>
         <a href="#sobre-mi">SOBRE MI</a>
-        <a href="#inversion">INVERSIÓN</a>
+        <a href="#inversion">ANÁLISIS</a>
         <a href="#blog">BLOG</a>
     </nav>
 
     <div class="boton-contacto">
-        <a href="">CONTACTO</a>
+        <a href="#contacto">CONTACTO</a>
     </div>
  </header>
 
@@ -47,16 +48,16 @@
                 </h1>
 
                 <p>
-                    Especialista en Grafonálisis aplicado al ámbito personal, empresarial y judicial.Traducimos tu escritura en indicadores de valor.
+                    Especialista en Grafonálisis aplicado al ámbito personal, empresarial y judicial.Traduzco tu escritura en indicadores de valor.
                 </p>
-                <a href="#" class="btn-agendar">Agendar sesión de analisis</a>
+                <a href="#contacto" class="btn-agendar">Agendar sesión de analisis</a>
             </div>
             <div class="imagen">
                 <img src="unnamed.png" alt="Imagen mano escribiendo">
                 <div class="circulito">
                     <div class="contenido-circulito">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-zoom-check"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /><path d="M7 10l2 2l4 -4" /></svg>
-                        <p>ANALISIS GESTALTICO<br><strong> Precisión técnica</strong></p>
+                        <p>ANALISIS ESTRUCTURAL<br><strong> Precisión técnica</strong></p>
                     </div>
                 </div>
             </div>
@@ -116,7 +117,7 @@
     </section>
     <section class="inversion" id="inversion">
         <div class="inversion-title">
-            <h2>Estructura de Inversión</h2>
+            <h2>Propuestas de Análisis</h2>
         </div>
         <footer>
             <div class="servicios-container">
@@ -127,16 +128,18 @@
                     <p>Informe técnico completo</p>
                     <p>Entrevista de devolución</p>
     
-                    <button class="consulta">Consultar</button>
+                    <a href="#contacto" class="consulta">
+                        Consultar
+                    </a>
                 </article>
-                <article class="precios-servicios" >
+                <article class="precios-servicios" style="position: relative;">
                     <span class="premium-badge">PREMIUM</span>
                     <h2>Soluciones Corporativas</h2>
                     <h3>A Medida</h3>
                     <p>Batería de tests grafológicos</p>
                     <p>Matching de perfiles de puesto</p>
                     <p>Consultoría continua</p>
-                    <button class="cotizacion">Solicitar Cotización</button>
+                    <a href="#contacto" class="cotizacion">Solicitar Cotización</a>
                 </article>
                 <article class="precios-servicios">
                     <h2>Soporte Técnico Judicial</h2>
@@ -144,7 +147,8 @@
                     <p>Análisis documental</p>
                     <p>Presencia en tribunales</p>
                     <p>Dictamen técnico legal</p>
-                    <button class="consulta" type="submit">Contactar</button>
+                    <a href="#contacto" class="consulta">Contactar</a>
+                    
                 </article>
             </div>
         </footer>
@@ -160,8 +164,8 @@
         <div class="articulos-blog">
             <article class="post-card-main">
                 <div class="post-imagen">
-                    <img src="unnamed.png" alt="imagen brand">
-                    <div class="post-main-text">
+                    <img src="garabatos.jpeg" alt="imagen brand">
+                    <div class="post-main-text">    
                         <span class="post-categoria">CURIOSIDAD CEREBRAL</span>
                         <h3>¿Por qué garabateamos? Mensajes ocultos de tu cerebro.</h3>
                     </div>
@@ -176,7 +180,7 @@
             </article>
 
             <article class="post-card">
-                <img src="unnamed.png" alt="Pluma estilográfica" class="post-thumb">
+                <img src="escritura.jpg" alt="Pluma estilográfica" class="post-thumb">
                 <div class="post-content">
                     <h3>La neurofisiología del trazo firme.</h3>
                     <p>Cómo el sistema nervioso central dicta la presión de la pluma...</p>
@@ -185,9 +189,83 @@
         </div>
     </section>
 
-    <section class="contacto"></section>
+    <section class="contacto" id="contacto">
+        <div class="contacto-container">
+        <div class="contacto-header">
+            <h2>Inicia tu Análisis</h2>
+            <p>Completa el formulario y me pondré en contacto contigo para una sesión inicial sin cargo.</p>
+        </div>
+
+        <form action="#" class="contacto-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">NOMBRE COMPLETO</label>
+                    <input type="text" id="nombre" placeholder="Ej. Ana García" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" placeholder="ana@ejemplo.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="interes">ÁREA DE INTERÉS</label>
+                <select id="interes" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="personal">Análisis Personal (Autoconocimiento)</option>
+                    <option value="empresarial">Selección de Personal / RRHH</option>
+                    <option value="judicial">Peritaje Judicial / Documentológico</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">MENSAJE (OPCIONAL)</label>
+                <textarea id="mensaje" rows="4" placeholder="Cuéntanos brevemente sobre tu necesidad..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">ENVIAR SOLICITUD</button>
+        </form>
+    </div>
+    </section>
  </main>
-
 </body>
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2 class="footer-logo">To.Grafología</h2>
+                <p>Tatiana Olivera - Grafoanalista Profesional.<br>Ciencia detrás de tus trazos.</p>
+            </div>
+            
+            <div class="footer-nav-col">
+                <h3>Explorar</h3>
+                <a href="#servicios">Servicios</a>
+                <a href="#sobre-mi">Sobre Mi</a>
+                <a href="#inversion">Inversión</a>
+            </div>
 
+            <div class="footer-nav-col">
+                <h3>Legal</h3>
+                <a href="#">Ética Profesional</a>
+                <a href="#">Términos Judiciales</a>
+                <a href="#">Privacidad</a>
+            </div>
+
+            <div class="footer-nav-col">
+                <h3>Social</h3>
+                <a href="https://www.instagram.com/to.grafologia" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.linkedin.com/in/tatiana-olivera-139324359" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.tiktok.com/@to.grafologia" target="_blank" rel="noopener noreferrer">TikTok</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <small>&copy; 2026 Tatiana Olivera - Grafoanalista Profesional. Ciencia detrás de tus trazos.</small>
+            <div class="footer-cert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
+                <span>Certificación Internacional en Grafología Científica</span>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>
