@@ -107,6 +107,7 @@ body{
 .texto h1 span{
     color: var(--primary);
     font-style: italic;
+    font-weight: 500;
 }
 
 .texto p{
@@ -496,7 +497,7 @@ body{
 }
 .post-content{
     padding: 24px;
-    justify-content: center;
+    
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -504,13 +505,13 @@ body{
 
 .post-content h3{
     font-family: 'Manrope', serif;
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 10px;
     color: #333;
 }
 
 .post-content p{
-    font-size: 15px;
+    font-size: 18px;
     color: #777;
     line-height: 1.4;
 }
