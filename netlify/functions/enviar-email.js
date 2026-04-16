@@ -7,20 +7,17 @@ export async function handler(event) {
     try {
         const { nombre, email, interes, mensaje } = JSON.parse(event.body);
 
-        // ⚠️ IMPORTANTE: Este es el correo que Tatiana verificó en SendGrid
         const correoRemitente = 'tatianaolivera.pg@gmail.com'; 
         
-        // ⚠️ IMPORTANTE: Este es el correo donde ella recibirá los avisos (puede ser el mismo)
         const correoDestino = 'tatianaolivera.pg@gmail.com';
 
-        // Estructura del cuerpo de la petición para la API de SendGrid
+
         const payload = {
             personalizations: [{
-                to: [{ email: correoDestino }] // Le llega a Tati
+                to: [{ email: correoDestino }] 
             }],
-            from: { email: correoRemitente, name: "Web To.Grafología" }, // Lo envía la web "en nombre" de Tati
+            from: { email: correoRemitente, name: "Web To.Grafología" }, 
             subject: `Nueva consulta de: ${nombre} - ${interes}`,
-            // Responder a: Si Tati le da a "Responder" en Gmail, le contestará directamente al cliente
             reply_to: { email: email, name: nombre }, 
             content: [{
                 type: "text/html",
@@ -40,7 +37,7 @@ export async function handler(event) {
             }]
         };
 
-        // Hacemos la llamada directa a la API de SendGrid
+        
         const sendgridResponse = await fetch('https://api.sendgrid.com/v3/mail/send', {
             method: 'POST',
             headers: {
@@ -65,7 +62,7 @@ export async function handler(event) {
         }
 
     } catch (error) {
-        console.error("Error en la funció   n:", error);
+        console.error("Error en la función:", error);
         return {
             statusCode: 500,
             body: JSON.stringify({ message: "Error interno del servidor" })

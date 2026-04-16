@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (formulario) {
         formulario.addEventListener('submit', async (e) => {
-            e.preventDefault(); // Evitamos que la página se recargue
+            e.preventDefault(); 
 
-            // Recolectamos los datos
+     
             const nombre = document.getElementById('nombre').value;
             const email = document.getElementById('email').value;
             const interes = document.getElementById('interes').value;
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             boton.disabled = true;
 
             try {
-                // Llamamos a la ruta de la Netlify Function que vamos a crear
+             
                 const response = await fetch('/.netlify/functions/enviar-email', {
                     method: 'POST',
                     body: JSON.stringify({ nombre, email, interes, mensaje }),
